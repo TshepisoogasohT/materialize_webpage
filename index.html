@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page with Materialize</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-image: url('background-image.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white; 
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background for content readability */
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .intro-section img, .city-section img {
+            width: 100%;
+            height: auto;
+        }
+        .subject img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        @media only screen and (max-width: 600px) {
+            .subject {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Intro Section -->
+        <div class="row intro-section">
+            <div class="col s12 center-align">
+                <h1>Tshepiso Freddy Thosago</h1>
+                <img src="table-mount.jpg" alt="Your Photo with Table Mountain" class="responsive-img">
+            </div>
+        </div>
+
+        <!-- Which City Section -->
+        <div class="row city-section">
+            <div class="col s12 m6">
+                <h2>Which City?</h2>
+                <p>I would like to visit the city of Rome. Rome, the capital of Italy, is renowned for its unparalleled beauty and historical significance. Often referred to as "The Eternal City," Rome's beauty lies in its seamless blend of ancient history, stunning architecture, and vibrant culture.</p>
+            </div>
+            <div class="col s12 m6">
+                <img src="city-photo.jpg" alt="City Photo" class="responsive-img">
+            </div>
+        </div>
+
+        <!-- Foreign Language Section -->
+        <div class="row">
+            <div class="col s12">
+                <h2>A Foreign Language</h2>
+                <p>I would like to learn Italian because Italian is a beautiful and musical language, and learning it would allow me to fully enjoy Italian culture and communicate with locals when I visit Italy.</p>
+                <table class="highlight">
+                    <thead>
+                        <tr>
+                            <th>English</th>
+                            <th>Italian</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hello</td>
+                            <td>Ciao</td>
+                        </tr>
+                        <tr>
+                            <td>Thank you</td>
+                            <td>Grazie</td>
+                        </tr>
+                        <tr>
+                            <td>How are you?</td>
+                            <td>Come stai?</td>
+                        </tr>
+                        <tr>
+                            <td>Goodbye</td>
+                            <td>Arrivederci</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Favourite Subjects Section -->
+        <div class="row">
+            <div class="col s12">
+                <h2>Favourite Subjects</h2>
+                <p>I completed my Bachelor of Commerce in Information Systems at the University of Johannesburg.</p>
+            </div>
+            <div class="row">
+                <div class="col s12 m4 subject">
+                    <h4>Software Development</h4>
+                    <img src="subject1.jpg" alt="Software Development" class="responsive-img">
+                    <p>A software development module is a fundamental building block in modern software engineering, promoting organized, efficient, and scalable development practices. By encapsulating specific functionality and maintaining clear interfaces, modules enable developers to build complex applications that are easier to develop, test, and maintain.</p>
+                </div>
+                <div class="col s12 m4 subject">
+                    <h4>Information Systems</h4>
+                    <img src="subject2.jpg" alt="Information Systems" class="responsive-img">
+                    <p>Information Systems modules integrate technology and business, focusing on the study and application of computer-based information systems in organizations. This includes database management, business process analysis, and system design.</p>
+                </div>
+                <div class="col s12 m4 subject">
+                    <h4>Agile Principles</h4>
+                    <img src="subject3.jpg" alt="Agile Principles" class="responsive-img">
+                    <p>The Agile Principles module equips students with a thorough understanding of Agile methodologies, fostering an agile mindset that prioritizes flexibility, collaboration, and customer satisfaction. By learning various Agile frameworks and practices, students are prepared to implement and manage Agile processes effectively, leading to the successful delivery of high-quality software in a dynamic environment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
