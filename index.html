@@ -9,12 +9,12 @@
     <!-- Custom CSS -->
     <style>
         body {
-            background-image: url('background-image.jpg'); 
+            background-image: url('background-image.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            color: white; 
+            color: white;
         }
         .container {
             background-color: rgba(0, 0, 0, 0.7); /* Dark background for content readability */
@@ -32,25 +32,62 @@
             display: block;
             margin: 0 auto;
         }
+        .subject {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .subject:nth-child(even) {
+            flex-direction: column-reverse;
+        }
         @media only screen and (max-width: 600px) {
             .subject {
                 text-align: center;
             }
         }
+        .carousel .carousel-item {
+            width: 100%;
+            height: 500px;
+        }
+        .carousel .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="#" class="brand-logo">My Page</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#city">City</a></li>
+                <li><a href="#language">Language</a></li>
+                <li><a href="#subjects">Subjects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Container -->
     <div class="container">
         <!-- Intro Section -->
-        <div class="row intro-section">
+        <div class="row intro-section" id="intro">
             <div class="col s12 center-align">
                 <h1>Tshepiso Freddy Thosago</h1>
-                <img src="table-mount.jpg" alt="Your Photo with Table Mountain" class="responsive-img">
+                <div class="carousel carousel-slider">
+                    <a class="carousel-item" href="#one!"><img src="table-mount.jpg" alt="Your Photo with Table Mountain"></a>
+                    <a class="carousel-item" href="#two!"><img src="image2.jpg" alt="Image 2"></a>
+                    <a class="carousel-item" href="#three!"><img src="image3.jpg" alt="Image 3"></a>
+                </div>
             </div>
         </div>
 
         <!-- Which City Section -->
-        <div class="row city-section">
+        <div class="row city-section" id="city">
             <div class="col s12 m6">
                 <h2>Which City?</h2>
                 <p>I would like to visit the city of Rome. Rome, the capital of Italy, is renowned for its unparalleled beauty and historical significance. Often referred to as "The Eternal City," Rome's beauty lies in its seamless blend of ancient history, stunning architecture, and vibrant culture.</p>
@@ -61,7 +98,7 @@
         </div>
 
         <!-- Foreign Language Section -->
-        <div class="row">
+        <div class="row" id="language">
             <div class="col s12">
                 <h2>A Foreign Language</h2>
                 <p>I would like to learn Italian because Italian is a beautiful and musical language, and learning it would allow me to fully enjoy Italian culture and communicate with locals when I visit Italy.</p>
@@ -95,7 +132,7 @@
         </div>
 
         <!-- Favourite Subjects Section -->
-        <div class="row">
+        <div class="row" id="subjects">
             <div class="col s12">
                 <h2>Favourite Subjects</h2>
                 <p>I completed my Bachelor of Commerce in Information Systems at the University of Johannesburg.</p>
@@ -122,5 +159,20 @@
 
     <!-- Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                fullWidth: true,
+                indicators: true
+            });
+        });
+
+        // Initialize scrollspy for smooth scrolling
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.scrollspy');
+            var instances = M.ScrollSpy.init(elems);
+        });
+    </script>
 </body>
 </html>
